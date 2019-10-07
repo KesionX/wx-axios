@@ -2,16 +2,19 @@ import { AdapterInterface } from './AdapterInterface';
 import { Config } from './Config';
 import { Util } from './Util';
 import { WXCancelImpl } from './WXCancelImpl';
+import { Promise } from 'es6-promise';
 
 export class WXAdapterImpl implements AdapterInterface {
     wxr: any;
     constructor() {
+        // @ts-ignore
         this.wxr = wx['request'];
         this.wxr = function(obj: any) {
             obj = obj || {};
             return new Promise((resolve: any, reject: any) => {
                 obj.success = resolve;
                 obj.fail = reject;
+                // @ts-ignore
                 let request = wx['request'](obj);
                 if (obj.onRequest) {
                     obj.onRequest(request);

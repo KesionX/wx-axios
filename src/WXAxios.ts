@@ -3,6 +3,7 @@ import { Util } from './Util';
 import { InterceptorManager } from './InterceptorManager';
 import { Config } from './Config';
 import { DispatchRequest } from './DispatchRequest';
+import { Promise } from 'es6-promise';
 
 /**
  * config配置执行顺序 default < user config < interceptor
