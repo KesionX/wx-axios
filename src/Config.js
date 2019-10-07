@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Config = (function () {
+    function Config() {
+        this.url = null;
+        this.method = null;
+        this.baseUrl = null;
+        this.headers = {};
+        this.params = {};
+        this.data = {};
+        this.onRequest = null;
+        this.cancelToken = null;
+    }
+    return Config;
+}());
+exports.Config = Config;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ29uZmlnLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQ29uZmlnLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBS0E7SUFhSTtRQUNJLElBQUksQ0FBQyxHQUFHLEdBQUcsSUFBSSxDQUFDO1FBQ2hCLElBQUksQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDO1FBQ25CLElBQUksQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDO1FBQ3BCLElBQUksQ0FBQyxPQUFPLEdBQUcsRUFBRSxDQUFDO1FBQ2xCLElBQUksQ0FBQyxNQUFNLEdBQUcsRUFBRSxDQUFDO1FBQ2pCLElBQUksQ0FBQyxJQUFJLEdBQUcsRUFBRSxDQUFDO1FBQ2YsSUFBSSxDQUFDLFNBQVMsR0FBRyxJQUFJLENBQUM7UUFDdEIsSUFBSSxDQUFDLFdBQVcsR0FBRyxJQUFJLENBQUM7SUFDNUIsQ0FBQztJQUNMLGFBQUM7QUFBRCxDQUFDLEFBdkJELElBdUJDO0FBdkJZLHdCQUFNIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ2FuY2VsSW50ZXJmYWNlIH0gZnJvbSAnLi9DYW5jZWxJbnRlcmZhY2UnO1xuXG4vKipcbiAqIOmFjee9ruivt+axguexu+WjsOaYjlxuICovXG5leHBvcnQgY2xhc3MgQ29uZmlnIHtcbiAgICB1cmw6IHN0cmluZyB8IG51bGw7XG4gICAgbWV0aG9kOiBzdHJpbmcgfCBudWxsO1xuICAgIGJhc2VVcmw6IHN0cmluZyB8IG51bGw7XG4gICAgaGVhZGVyczogYW55IHwgbnVsbDtcbiAgICBwYXJhbXM6IGFueSB8IG51bGw7XG4gICAgZGF0YTogYW55IHwgbnVsbDtcbiAgICBcbiAgICAvLyBvblJlcXVlc3Qg55uR5ZCscmVxdWVzdOeUn+aIkOaXtlxuICAgIG9uUmVxdWVzdDogKChyZXF1ZXN0OiBhbnkpID0+IHZvaWQpIHwgbnVsbDtcbiAgICAvLyBjYW5jZWxcbiAgICBjYW5jZWxUb2tlbjogKChjYW5jZWxGbjogQ2FuY2VsSW50ZXJmYWNlKSA9PiB2b2lkKSB8IG51bGw7XG5cbiAgICBjb25zdHJ1Y3RvcigpIHtcbiAgICAgICAgdGhpcy51cmwgPSBudWxsO1xuICAgICAgICB0aGlzLm1ldGhvZCA9IG51bGw7XG4gICAgICAgIHRoaXMuYmFzZVVybCA9IG51bGw7XG4gICAgICAgIHRoaXMuaGVhZGVycyA9IHt9O1xuICAgICAgICB0aGlzLnBhcmFtcyA9IHt9O1xuICAgICAgICB0aGlzLmRhdGEgPSB7fTtcbiAgICAgICAgdGhpcy5vblJlcXVlc3QgPSBudWxsO1xuICAgICAgICB0aGlzLmNhbmNlbFRva2VuID0gbnVsbDtcbiAgICB9XG59Il19
