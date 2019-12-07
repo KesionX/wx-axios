@@ -1,2 +1,3 @@
 # wx-axios
-微信axios
+
+axios for wechat app 

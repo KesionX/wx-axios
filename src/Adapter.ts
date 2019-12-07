@@ -12,14 +12,14 @@ export class Adapter {
     /**
      * get方法
      */
-    public get() : Promise<Object> | null {
+    public get() : Promise<object> | null {
         return this.adapter.get();
     }
 
     /**
      * request
      */
-    public request(config: Config): Promise<Object> {
+    public request(config: Config): Promise<object> {
         return this.adapter.request(config);
     }
 

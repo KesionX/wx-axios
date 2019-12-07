@@ -3,7 +3,6 @@ import { Util } from './Util';
 import { InterceptorManager } from './InterceptorManager';
 import { Config } from './Config';
 import { DispatchRequest } from './DispatchRequest';
-import { Promise } from 'es6-promise';
 
 /**
  * config配置执行顺序 default < user config < interceptor
@@ -28,7 +27,7 @@ export class WXAxios {
         }
     }
 
-    private requestWork(config: Config) : Promise<Object> {
+    private requestWork(config: Config) : Promise<object> {
         let p = Promise.resolve(config);
         let chain : Array<any>;
         chain = new Array();
@@ -59,7 +58,7 @@ export class WXAxios {
      * @param url 
      * @param config 
      */
-    public get(url: string, config: Config) : Promise<Object> {
+    public get(url?: string, config?: Config) : Promise<object> {
         let mConfig : Config;
         mConfig = Util.mergeIfNotNull(this.default, config, {url: url});
         mConfig.method = 'GET';
@@ -71,7 +70,7 @@ export class WXAxios {
      * @param url 
      * @param config 
      */
-    public delete(url: string, config: Config) : Promise<Object> {
+    public delete(url?: string, config?: Config) : Promise<object> {
         let mConfig : Config;
         mConfig = Util.mergeIfNotNull(this.default, config, {url: url});
         mConfig.method = 'DELETE';
@@ -83,7 +82,7 @@ export class WXAxios {
      * @param url 
      * @param config 
      */
-    public head(url: string, config: Config) : Promise<Object> {
+    public head(url?: string, config?: Config) : Promise<object> {
         let mConfig : Config;
         mConfig = Util.mergeIfNotNull(this.default, config, {url: url});
         mConfig.method = 'HEAD';
@@ -95,7 +94,7 @@ export class WXAxios {
      * @param url 
      * @param config 
      */
-    public options(url: string, config: Config) : Promise<Object> {
+    public options(url?: string, config?: Config) : Promise<object> {
         let mConfig : Config;
         mConfig = Util.mergeIfNotNull(this.default, config, {url: url});
         mConfig.method = 'OPTIONS';
@@ -108,7 +107,7 @@ export class WXAxios {
      * @param data 
      * @param config 
      */
-    public post(url: string, data: Object, config: Config) : Promise<Object> {
+    public post(url?: string, data?: object, config?: Config) : Promise<object> {
         let mConfig : Config;
         mConfig = Util.mergeIfNotNull(this.default, config, {url: url}, {data: data});
         mConfig.method = 'POST';
@@ -121,7 +120,7 @@ export class WXAxios {
      * @param data 
      * @param config 
      */
-    public put(url: string, data: Object, config: Config) : Promise<Object> {
+    public put(url?: string, data?: object, config?: Config) : Promise<object> {
         let mConfig : Config;
         mConfig = Util.mergeIfNotNull(this.default, config, {url: url}, {data: data});
         mConfig.method = 'PUT';
@@ -132,7 +131,7 @@ export class WXAxios {
      * request
      * @param config 
      */
-    public request(config: Config) : Promise<Object> {
+    public request(config?: Config) : Promise<object> {
         let mConfig : Config;
         mConfig = Util.mergeIfNotNull(this.default, config);
         if (mConfig.method) {

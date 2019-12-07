@@ -10,7 +10,7 @@ export class DispatchRequest {
         adapter = mAdapter;
     }
 
-    public dispatchRequest(config: Config) : Promise<Object> {
+    public dispatchRequest(config: Config) : Promise<object> {
         return adapter.request(config).then(function onResolution(response: any) {
             response.config = config;
             response.status = response.statusCode;

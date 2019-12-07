@@ -2,7 +2,6 @@ import { AdapterInterface } from './AdapterInterface';
 import { Config } from './Config';
 import { Util } from './Util';
 import { WXCancelImpl } from './WXCancelImpl';
-import { Promise } from 'es6-promise';
 
 export class WXAdapterImpl implements AdapterInterface {
     wxr: any;
@@ -27,16 +26,16 @@ export class WXAdapterImpl implements AdapterInterface {
         };
     }
 
-    public get() : Promise<Object> | null {
+    public get() : Promise<object> | null {
         return null;
     }
 
-    public post() : Promise<Object> | null {
+    public post() : Promise<object> | null {
         return null;
     }
 
     // TODO
-    public request(config: Config): Promise<Object> {
+    public request(config: Config): Promise<object> {
         let url = '';
         if (config.baseUrl) {
             url = url + config.baseUrl;

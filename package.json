@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KesionX/wx-axios.git"
+    "url": "git@git.ainom.cn:tc-wx/wx-axios.git"
   },
   "author": "kejianfang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KesionX/wx-axios/issues"
+    "url": "http://git.ainom.cn/tc-wx/wx-axios/issues"
   },
-  "homepage": "https://github.com/KesionX/wx-axios#readme",
+  "homepage": "http://git.ainom.cn/tc-wx/wx-axios",
   "devDependencies": {
     "@types/es6-promise": "^3.3.0",
     "awesome-typescript-loader": "^5.2.1",

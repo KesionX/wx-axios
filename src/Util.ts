@@ -31,9 +31,10 @@ export class Util {
                 result[key] = Util.mergeIfNotNull(result[key], val);
             } else {
                 // 非object需注意值覆盖问题
-                if (val) {
-                    result[key] = val;
-                }
+               	if(val || val === 0) {
+		   result[key] = val;
+		}
+                
             }
         }
       

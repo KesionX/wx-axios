@@ -4,12 +4,12 @@ export interface AdapterInterface {
     /**
      * get请求
      */
-    get() : Promise<Object> | null;
+    get() : Promise<object> | null;
     
     /**
      * post请求
      */
-    post() : Promise<Object> | null;
+    post() : Promise<object> | null;
 
-    request(config: Config): Promise<Object>;
+    request(config: Config): Promise<object>;
 }
