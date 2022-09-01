@@ -1,10 +1,5 @@
-"use strict";
-exports.__esModule = true;
-/**
- * 配置请求类声明
- */
-var Config = /** @class */ (function () {
-    function Config() {
+export class Config {
+    constructor() {
         this.url = null;
         this.method = null;
         this.baseUrl = null;
@@ -14,6 +9,4 @@ var Config = /** @class */ (function () {
         this.onRequest = null;
         this.cancelToken = null;
     }
-    return Config;
-}());
-exports.Config = Config;
+}

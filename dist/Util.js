@@ -1,21 +1,15 @@
-"use strict";
-exports.__esModule = true;
-var Util = /** @class */ (function () {
-    function Util() {
+export class Util {
+    constructor() {
         this.toString = Object.prototype.toString;
     }
-    Util.isArray = function (val) {
-        return toString.call(val) === '[object Array]';
-    };
-    Util.merge = function () {
-        var obj = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            obj[_i] = arguments[_i];
-        }
-        var result;
+    static isArray(val) {
+        return Util.toString.call(val) === "[object Array]";
+    }
+    static merge(...obj) {
+        let result;
         result = {};
         function assignValue(val, key) {
-            if (typeof result[key] === 'object' && typeof val === 'object') {
+            if (typeof result[key] === "object" && typeof val === "object") {
                 result[key] = Util.merge(result[key], val);
             }
             else {
@@ -26,20 +20,15 @@ var Util = /** @class */ (function () {
             Util.forEach(arguments[i], assignValue);
         }
         return result;
-    };
-    Util.mergeIfNotNull = function () {
-        var obj = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            obj[_i] = arguments[_i];
-        }
-        var result;
+    }
+    static mergeIfNotNull(...obj) {
+        let result;
         result = {};
         function assignValue(val, key) {
-            if (typeof result[key] === 'object' && typeof val === 'object') {
+            if (typeof result[key] === "object" && typeof val === "object") {
                 result[key] = Util.mergeIfNotNull(result[key], val);
             }
             else {
-                // 非object需注意值覆盖问题
                 if (val || val === 0) {
                     result[key] = val;
                 }
@@ -49,12 +38,12 @@ var Util = /** @class */ (function () {
             Util.forEach(arguments[i], assignValue);
         }
         return result;
-    };
-    Util.forEach = function (obj, fn) {
-        if (obj === null || typeof obj === 'undefined') {
+    }
+    static forEach(obj, fn) {
+        if (obj === null || typeof obj === "undefined") {
             return;
         }
-        if (typeof obj !== 'object') {
+        if (typeof obj !== "object") {
             obj = [obj];
         }
         if (Util.isArray(obj)) {
@@ -69,7 +58,5 @@ var Util = /** @class */ (function () {
                 }
             }
         }
-    };
-    return Util;
-}());
-exports.Util = Util;
+    }
+}
