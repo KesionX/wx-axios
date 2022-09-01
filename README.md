@@ -1,3 +1,7 @@
-# wx-axios
+# wx-mini-axios
 
-axios for wechat app 
+axios for wechat app
+
+## Install
+
+`npm i wx-mini-axios`

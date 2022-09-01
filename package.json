@@ -1,7 +1,7 @@
 {
-  "name": "wx-axios",
+  "name": "wx-mini-axios",
   "version": "1.0.0",
-  "description": "wx-axios",
+  "description": "wx-mini-axios",
   "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
