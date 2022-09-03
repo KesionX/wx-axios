@@ -1,8 +1,10 @@
 {
   "name": "wx-mini-axios",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "axios for wechat app",
   "main": "./dist/index.js",
+  "type": "module",
+  "types": "./dist/types",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
